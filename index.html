@@ -12,16 +12,17 @@
 <body class="">
     <div id="view">
         <h1>VDTV</h1>
-        <a href='/TV/NEWS' onclick='ajaxLoad()'>新聞</a>
+        <a href='/TV/NEWS'>新聞</a>
     </div>
     <script>
-    var ajaxLoad=function(e) {
-        e.preventDefault()
-        url = e.target.href
-                    history.pushState('',url,{})
-                    $('#view').load(url+ ' #view')
-                }
-    
+    var registerAjax = function(){
+        document.getElementsByTagName('a').forEach(el=>{
+            el.addEventListener('click',function(e) {
+            e.preventDefault()
+            history.pushState('',{},url)
+            $('#view').load(url+ ' #view')
+        })
+        })
     </script>
 </body>
 
