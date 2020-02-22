@@ -7,17 +7,13 @@
 	<title>VDTV - 線上影音平台</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  
 
 </head>
 <body class="">
   <div id="app">
     <h1>Hello App!</h1>
-    <p>
-      <router-link to="/TV">Go to TV</router-link>
-    </p>
-  
-    <router-view></router-view>
+    
   </div>
 	<script type='text/x-template' id='TV'>
     TV IS HERE
@@ -37,13 +33,8 @@
   		}
 		})
     const app = new Vue({
-      router:new VueRouter({
-				mode: 'history',
-        routes: [
-          { path: '/TV', component: TV }
-        ]
-      })
-    }).$mount('#app')
+      el:'#app'
+    })
   </script>
 </body>
 </html>
