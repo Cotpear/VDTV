@@ -65,17 +65,19 @@
             $('.sidenav').sidenav();
             $('#SideBarNav > a').each(function(){
                 let that = this
-                
                 $(this).click(function(e){
                     e.preventDefault()
                     history.pushState('',{},that.href.split('/')[that.href.split('/').length-1])
-                    LoadSection(that.href.split('/')[that.href.split('/').length-1],'#MainContent')
+                    LoadSection(that.href.split('/')[that.href.split('/').length-1],'#MainContent',function(data){
+                        document.title = $(data).find('title')
+                        $('.tabs').tabs();
+                        $('.sidenav').sidenav();
+                        $(window).trigger('resize');
+                    })
                     $('#SideBarNav > a').each(function(){
                         $(this).removeClass('active')
                     })
                     $(that).addClass('active')
-                    $('.tabs').tabs();
-                    $('.sidenav').sidenav();
                 })
             })
         })
