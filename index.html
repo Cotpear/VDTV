@@ -21,6 +21,7 @@
                 e.preventDefault()
                 history.pushState('',{},el.href)
                 $('#view').load(el.href + ' #view',function(){
+                    alert('ok')
                     registerAjax()
                 })
             })
