@@ -31,7 +31,7 @@
             <br>
             <div class="collection" id="SideBarNav">
                 <a href="#!" class="collection-item active">中天</a>
-                <a href="TVBS.html" class="collection-item">TVBS</a>
+                <a href="#!TVBS.html" class="collection-item">TVBS</a>
                 <a href="#!" class="collection-item">Alvin</a>
                 <a href="#!" class="collection-item">Alvin</a>
             </div>  
@@ -63,10 +63,11 @@
         $(document).ready(function() {
             $('.tabs').tabs();
             $('.sidenav').sidenav();
-            $('#SideBarNav > a').each(function(){
+            $('#SideBarNav > a').each(function(e){
                 let that = this
+                e.preventDefault()
                 $(this).click(function(){
-                    LoadSection(that.href,'#MainContent')
+                    LoadSection(that.href.substr(2),'#MainContent')
                     $('#SideBarNav > a').each(function(){
                         $(this).removeClass('active')
                     })
