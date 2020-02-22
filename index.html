@@ -18,11 +18,14 @@
     var registerAjax = function(){
         document.getElementsByTagName('a').forEach(el=>{
             el.addEventListener('click',function(e) {
-            e.preventDefault()
-            history.pushState('',{},url)
-            $('#view').load(url+ ' #view')
+                e.preventDefault()
+                history.pushState('',{},el.href)
+                $('#view').load(el.href + ' #view',function(){
+                    registerAjax()
+                })
+            })
         })
-        })
+    }
     </script>
 </body>
 
