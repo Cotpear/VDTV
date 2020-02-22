@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 
@@ -7,31 +8,25 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>VDTV - 線上影音平台</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
 </head>
 
 <body class="">
-    <div id="app">
-        <h1>VDTV</h1>
+    <div id="view">
+        <h1>404</h1>
+        <a href='/TV/NEWS'>新聞</a>
     </div>
-    <script type='text/x-template' id='TV'>
-        TV IS HERE
-    </script>
     <script>
-        Vue.component('TV', {
-            template: '#TV',
-            data: function() {
-                return {
-                    message: 'Hello World!'
-                }
-            },
-            methods: {
-
-            }
+    var registerAjax = function(){
+        document.getElementsByTagName('a').forEach(el=>{
+            el.addEventListener('click',function(e) {
+                e.preventDefault()
+                history.pushState('',{},el.href)
+                $('#view').load(el.href + ' #view',function(){
+                    registerAjax()
+                })
+            })
         })
-        const app = new Vue({
-            el: '#app'
-        })
+    }
     </script>
 </body>
 
