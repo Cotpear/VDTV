@@ -16,13 +16,15 @@
     <nav class="nav-extended">
         <div class="nav-wrapper">
             <a href="#" class="brand-logo">VDTV</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        </div>
-        <div class="nav-content">
-            
+            <a href="#" data-target="SideNavigation" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+            </ul>
         </div>
     </nav>
-
+    <ul class="sidenav" id="SideNavigation">
+        <li><a href="/">Home</a></li>
+    </ul>
     <div class="row">
         <div class="col s3">
             <div class="collection">
@@ -57,6 +59,7 @@
     <script>
         $(document).ready(function() {
             $('.tabs').tabs();
+            $('.sidenav').sidenav();
         })
     </script>
 </body>
