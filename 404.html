@@ -11,6 +11,40 @@
 
 </head>
 <body class="">
-
+  <div id="app">
+    <h1>Hello App!</h1>
+    <p>
+    <router-link to="/foo">Go to Foo</router-link>
+    <router-link to="/bar">Go to Bar</router-link>
+    </p>
+  
+    <router-view></router-view>
+  </div>
+	<script type='text/x-template' id='TV'>
+    TV IS HERE
+  </script>
+	<script>
+		Vue.component('prompt-component', {
+		  template: '#TV',
+  		data: function () {
+    		return {
+     		  message: 'Hello World!'
+   		  }
+  		},
+  		methods: {
+    		sayHi: function() {
+      		alert('Hi');
+    		}
+  		}
+		})
+    const app = new Vue({
+      router:new VueRouter({
+				mode: 'history',
+        routes: [
+          { path: '/TV', component: TV }
+        ]
+      })
+    }).$mount('#app')
+  </script>
 </body>
 </html>
