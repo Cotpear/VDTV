@@ -45,30 +45,15 @@
                 <div class="video-container">
                     <iframe id="YT_frame" src="https://www.youtube.com/embed/Hu1FkdAOws0?vq=hd1080&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
                 </div>
+                &copy; Cotpear VDTV
             </div>
-            <div id="about" class="col s12">TVBS</div>
-            
-            &copy; Cotpear VDTV
+            <div id="about" class="col s12">
+                TVBS
+            </div>
         </div>
     </div>
     <script>
-        const YT_url = "https://www.youtube.com/embed/Hu1FkdAOws0?vq=hd1080&autoplay=1&loop=1"
-        
-        /*var registerAjax = function() {
-            document.getElementsByTagName('a').forEach(el => {
-                el.addEventListener('click', function(e) {
-                    e.preventDefault()
-                    history.pushState('', {}, el.href)
-                    $('#view').load(el.href + ' #view', function() {
-                        alert('ok')
-                        registerAjax()
-                    })
-                })
-            })
-        }*/
         $(document).ready(function() {
-            //registerAjax()
-            $('#YT_frame').attr('src',YT_url)
             $(document).ready(function(){
                 $('.tabs').tabs();
             });
