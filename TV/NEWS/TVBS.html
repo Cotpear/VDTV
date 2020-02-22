@@ -11,31 +11,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
-<body class="">
+<body>
     <div class="row">
-
-      <div class="col s3">
-        <!-- Grey navigation panel -->
-      </div>
-
-      <div class="col s9">
-        <h1>TVBS</h1>
-          <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/Hu1FkdAOws0?vq=hd1080&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
-      </div>
-      </div>
-
-    </div>
-                
-            
-
-    
-        <div class="container">
-            <p class="text-muted">&copy; Cotpear VDTV</p>
+        <div class="col s3">
+            <div class="collection">
+                <a href="#!" class="collection-item">Alvin</a>
+                <a href="#!" class="collection-item active">TVBS</a>
+                <a href="#!" class="collection-item">Alvin</a>
+                <a href="#!" class="collection-item">Alvin</a>
+            </div>  
         </div>
-    
-
+        <div class="col s9">
+            <h1>TVBS</h1>
+            <div class="video-container">
+                <iframe id="YT_frame" frameborder="0" allowfullscreen></iframe>
+            </div>
+            &copy; Cotpear VDTV
+        </div>
+    </div>
     <script>
+        const YT_url = "https://www.youtube.com/embed/Hu1FkdAOws0?vq=hd1080&autoplay=1&loop=1"
+        
         var registerAjax = function() {
             document.getElementsByTagName('a').forEach(el => {
                 el.addEventListener('click', function(e) {
@@ -50,6 +46,7 @@
         }
         $(document).on('ready', function() {
             registerAjax()
+            $('#YT_frame').attr('src',YT_url)
         })
     </script>
 </body>
