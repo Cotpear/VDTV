@@ -70,10 +70,10 @@
                     $('#MainContent').load(that.href.split('/')[that.href.split('/').length-1] + ' #MainContent',function(data){
                         $('#MainContent').html($(data).find('#MainContent').html())
                         document.title = $(data).find('#title').html()
-                        //alert($(data).find('title').text())
+                        
                         $('.tabs').tabs();
                         $('.sidenav').sidenav();
-                        $(section).show()                        
+                        $('#MainContent').show()                        
                     })
                     history.pushState('',{},that.href.split('/')[that.href.split('/').length-1])
                     
