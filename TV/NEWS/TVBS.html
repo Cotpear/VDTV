@@ -7,31 +7,29 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>TVBS | VDTV 線上影音平台</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
 </head>
 
 <body class="">
-    <div id="app">
-        <h1>VDTV</h1>
+    <div id="view">
+        <h1>TVBS</h1>
+        <iframe src="https://www.youtube.com/embed/Hu1FkdAOws0?vq=hd1080&autoplay=1&loop=1" width="560" height="315" frameborder="0"></iframe>
     </div>
-    <script type='text/x-template' id='TV'>
-        TV IS HERE
-    </script>
     <script>
-        Vue.component('TV', {
-            template: '#TV',
-            data: function() {
-                return {
-                    message: 'Hello World!'
-                }
-            },
-            methods: {
-
-            }
+    var registerAjax = function(){
+        document.getElementsByTagName('a').forEach(el=>{
+            el.addEventListener('click',function(e) {
+                e.preventDefault()
+                history.pushState('',{},el.href)
+                $('#view').load(el.href + ' #view',function(){
+                    alert('ok')
+                    registerAjax()
+                })
+            })
         })
-        const app = new Vue({
-            el: '#app'
-        })
+    }
+    $(document).on('ready',function(){
+        registerAjax()
+    })
     </script>
 </body>
 
