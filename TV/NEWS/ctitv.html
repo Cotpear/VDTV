@@ -67,6 +67,7 @@
                 let that = this
                 $(this).click(function(e){
                     e.preventDefault()
+                    
                     history.pushState('',{},that.href.split('/')[that.href.split('/').length-1])
                     LoadSection(that.href.split('/')[that.href.split('/').length-1],'#MainContent',function(data){
                         document.title = $(data).find('title')
