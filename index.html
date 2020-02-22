@@ -24,7 +24,7 @@
             methods: {
                 ajaxLoad: function(url) {
                     history.pushState('',url,{})
-                    fetch(url).then(r=>r.html()).then(r=>{
+                    fetch(url).then(r=>r.text()).then(r=>{
                         app.message=r;
                     })
                 }
