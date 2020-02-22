@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/src/ajax.js" ></script>
 </head>
 
 <body>
@@ -67,14 +66,18 @@
                 let that = this
                 $(this).click(function(e){
                     e.preventDefault()
-                    history.pushState('',{},that.href.split('/')[that.href.split('/').length-1])
-                    LoadSection(that.href.split('/')[that.href.split('/').length-1],'#MainContent',function(data){
+                    $('#MainContent').hide()
+                    $('#MainContent').load(that.href.split('/')[that.href.split('/').length-1] + ' #MainContent',function(data){
+                        alert(data)
                         document.title = $(data).find('title').text()
                         alert($(data).find('title').text())
                         $('.tabs').tabs();
                         $('.sidenav').sidenav();
                         $(window).trigger('resize');
+                        $(section).show()
                     })
+                    history.pushState('',{},that.href.split('/')[that.href.split('/').length-1])
+                    
                     $('#SideBarNav > a').each(function(){
                         $(this).removeClass('active')
                     })
