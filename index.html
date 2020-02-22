@@ -1,1 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>VDTV - 線上影音平台</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
+</head>
+<body class="">
+  <div id="app">
+    <h1>Hello App!</h1>
+    <p>
+      <router-link to="/TV">Go to TV</router-link>
+    </p>
+  
+    <router-view></router-view>
+  </div>
+	<script type='text/x-template' id='TV'>
+    TV IS HERE
+  </script>
+	<script>
+		Vue.component('prompt-component', {
+		  template: '#TV',
+  		data: function () {
+    		return {
+     		  message: 'Hello World!'
+   		  }
+  		},
+  		methods: {
+    		sayHi: function() {
+      		alert('Hi');
+    		}
+  		}
+		})
+    const app = new Vue({
+      router:new VueRouter({
+				mode: 'history',
+        routes: [
+          { path: '/TV', component: TV }
+        ]
+      })
+    }).$mount('#app')
+  </script>
+</body>
+</html>
