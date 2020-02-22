@@ -69,11 +69,14 @@
                 $(this).click(function(e){
                     e.preventDefault()
                     //history.pushState
+                    alert(that.href)
                     LoadSection('TVBS.html','#MainContent')
                     $('#SideBarNav > a').each(function(){
                         $(this).removeClass('active')
                     })
                     $(that).addClass('active')
+                    $('.tabs').tabs();
+                    $('.sidenav').sidenav();
                 })
             })
         })
