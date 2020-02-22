@@ -68,9 +68,8 @@
                 
                 $(this).click(function(e){
                     e.preventDefault()
-                    //history.pushState
-                    alert(that.href)
-                    LoadSection('TVBS.html','#MainContent')
+                    history.pushState('',{},that.href.split('/')[that.href.split('/').length-1])
+                    LoadSection(that.href.split('/')[that.href.split('/').length-1],'#MainContent')
                     $('#SideBarNav > a').each(function(){
                         $(this).removeClass('active')
                     })
