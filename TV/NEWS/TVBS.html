@@ -68,13 +68,14 @@
                     e.preventDefault()
                     $('#MainContent').hide()
                     $('#MainContent').load(that.href.split('/')[that.href.split('/').length-1] + ' #MainContent',function(data){
-                        alert(data)
+                        alert($(data).find('#MainContent').html())
                         document.title = $(data).find('title').text()
-                        alert($(data).find('title').text())
+                        //alert($(data).find('title').text())
                         $('.tabs').tabs();
                         $('.sidenav').sidenav();
                         $(window).trigger('resize');
                         $(section).show()
+                        
                     })
                     history.pushState('',{},that.href.split('/')[that.href.split('/').length-1])
                     
