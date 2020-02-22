@@ -13,27 +13,31 @@
 <body class="">
     <div id="app">
         <h1>VDTV</h1>
+        {{message}}
     </div>
     <script type='text/x-template' id='TV'>
-        TV IS HERE
+        <a href='/TV/NEWS' @click='ajaxLoad(this.href)'>新聞</a>
     </script>
     <script>
         Vue.component('TV', {
             template: '#TV',
-            data: function() {
-                return {
-                    message: 'Hello World!'
+            methods: {
+                ajaxLoad: function(url) {
+                    history.pushState('',url,{})
+                    fetch(url).then(r=>r.html()).then(r=>{
+                        app.message=r;
+                    })
                 }
             },
-            methods: {
-
-            },
             created: function() {
-                return;
+                
             }
         })
         const app = new Vue({
-            el: '#app'
+            el: '#app',
+            data: {
+                message: 'Hello World'
+            }
         })
     </script>
 </body>
