@@ -69,7 +69,7 @@
                     $('#MainContent').hide()
                     $('#MainContent').load(that.href.split('/')[that.href.split('/').length-1] + ' #MainContent',function(data){
                         $('#MainContent').html($(data).find('#MainContent').html())
-                        document.title = $(data).find('#title').html()
+                        //document.title = $(data).find('#title').html()
                         
                         $('.tabs').tabs();
                         $('.sidenav').sidenav();
