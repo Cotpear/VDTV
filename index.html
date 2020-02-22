@@ -1,37 +1,38 @@
 <!doctype html>
 <html>
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<title>VDTV - 線上影音平台</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>VDTV - 線上影音平台</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
 </head>
+
 <body class="">
-  <div id="app">
-    <h1>VDTV</h1>
-  </div>
-	<script type='text/x-template' id='TV'>
-    TV IS HERE
-  </script>
-	<script>
-    Vue.component('TV', {
-		  template: '#TV',
-  		data: function () {
-    		return {
-     		  message: 'Hello World!'
-   		  }
-  		},
-  		methods: {
-    		sayHi: function() {
-      		alert('Hi');
-    		}
-  		}
-		})
-    const app = new Vue({
-      el:'#app'
-    })
-  </script>
+    <div id="app">
+        <h1>VDTV</h1>
+    </div>
+    <script type='text/x-template' id='TV'>
+        TV IS HERE
+    </script>
+    <script>
+        Vue.component('TV', {
+            template: '#TV',
+            data: function() {
+                return {
+                    message: 'Hello World!'
+                }
+            },
+            methods: {
+
+            }
+        })
+        const app = new Vue({
+            el: '#app'
+        })
+    </script>
 </body>
+
 </html>
