@@ -7,39 +7,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>VDTV - 線上影音平台</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
 </head>
 
 <body class="">
-    <div id="app">
+    <div id="view">
         <h1>VDTV</h1>
-        {{message}}
-        <TV></TV>
+        <a href='/TV/NEWS' onclick='ajaxLoad(this.href)'>新聞</a>
     </div>
-    <script type='text/x-template' id='TV'>
-        <a href='/TV/NEWS' @click='ajaxLoad(this.href)'>新聞</a>
-    </script>
     <script>
-        Vue.component('TV', {
-            template: '#TV',
-            methods: {
-                ajaxLoad: function(url) {
+    var ajaxLoad=function(url) {
                     history.pushState('',url,{})
-                    fetch(url).then(r=>r.text()).then(r=>{
-                        app.message=r;
-                    })
+                    $('#view').load(url+ ' #view')
                 }
-            },
-            created: function() {
-                
-            }
-        })
-        const app = new Vue({
-            el: '#app',
-            data: {
-                message: 'Hello World'
-            }
-        })
+    
     </script>
 </body>
 
