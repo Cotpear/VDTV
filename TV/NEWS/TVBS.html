@@ -32,7 +32,7 @@
     <script>
         const YT_url = "https://www.youtube.com/embed/Hu1FkdAOws0?vq=hd1080&autoplay=1&loop=1"
         
-        var registerAjax = function() {
+        /*var registerAjax = function() {
             document.getElementsByTagName('a').forEach(el => {
                 el.addEventListener('click', function(e) {
                     e.preventDefault()
@@ -43,9 +43,9 @@
                     })
                 })
             })
-        }
+        }*/
         $(document).on('ready', function() {
-            registerAjax()
+            //registerAjax()
             $('#YT_frame').attr('src',YT_url)
         })
     </script>
