@@ -2,18 +2,18 @@
 
   {% for cat in site.data.all %}
   <li class='active'>
-    <div class="collapsible-header"><i class="material-icons">live_tv</i>TV</div>
+    <div class="collapsible-header"><i class="material-icons">cat.icon</i>cat.name</div>
     <div class="collapsible-body">
     
-      {% for cat2 in cat %}
+      {% for cat2 in cat.child %}
       <li class='active'>
-        <div class="collapsible-header"><i class="material-icons">live_tv</i>TV</div>
+        <div class="collapsible-header"><i class="material-icons">cat2.icon</i>cat2.name</div>
         <div class="collapsible-body">
           <ul class="collection">
             
-            {% for Video in cat2 %}
+            {% for Video in cat2.child %}
             <a class="collection-item {% if include.page.title == Video.name %}active{%endif%}"
-               href='{{ Video.link | append: ".html" }}'>{{Video.name}}</a>
+               href='{{Video.link}}'>{{Video.name}}</a>
             {% endfor %}
             
           </ul>
