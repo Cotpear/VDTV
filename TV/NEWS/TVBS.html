@@ -54,6 +54,20 @@
         </div>
         <div class="col s12 m3">
             <br>
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+            </ul>
             <div class="collection" id="SideBarNav">
                 <a href="ctitv.html" class="collection-item">中天</a>
                 <a href="TVBS.html" class="collection-item active">TVBS</a>
@@ -74,10 +88,10 @@
                     $('#MainContent').load(that.href.split('/')[that.href.split('/').length-1] + ' #MainContent',function(data){
                         $('#MainContent').html($(data).find('#MainContent').html())
                         //document.title = $(data).find('#title').html()
-                        
+                        $('#MainContent').show()
                         $('.tabs').tabs();
                         $('.sidenav').sidenav();
-                        $('#MainContent').show()                        
+                                        
                     })
                     history.pushState('',{},that.href.split('/')[that.href.split('/').length-1])
                     
