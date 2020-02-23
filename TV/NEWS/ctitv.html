@@ -86,21 +86,28 @@
         </div>
     </div>
     <script>
+        jQuery.fn.visible = function() {
+            return this.css('visibility', 'visible');
+        };
+        jQuery.fn.invisible = function() {
+            return this.css('visibility', 'hidden');
+        };
         $(document).ready(function() {
             $('.tabs').tabs();
             $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
             $('#SideBarNav > a').each(function(){
                 let that = this
                 $(this).click(function(e){
                     e.preventDefault()
-                    $('#MainContent').hide()
+                    $('#MainContent').invisible()
                     $('#MainContent').load(that.href.split('/')[that.href.split('/').length-1] + ' #MainContent',function(data){
                         $('#MainContent').html($(data).find('#MainContent').html())
                         //document.title = $(data).find('#title').html()
-                        
+                        $('#MainContent').visible()
                         $('.tabs').tabs();
                         $('.sidenav').sidenav();
-                        $('#MainContent').show()                        
+                                        
                     })
                     history.pushState('',{},that.href.split('/')[that.href.split('/').length-1])
                     
