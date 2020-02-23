@@ -1,0 +1,18 @@
+{
+    "TV": {
+        "child": [
+            "NEWS": {
+                "child": [
+                    "ctitv": {
+                        "name": "中天",
+                        "link": "ctitv.html"
+                    },
+                    "TVBS": {
+                        "name": "TVBS",
+                        "link": "TVBS.html"
+                    }
+                ]
+            }
+        ]
+    }
+}
