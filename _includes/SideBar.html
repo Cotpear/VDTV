@@ -5,7 +5,7 @@
   <li {% if include.page.cat == cat.name %}class='active'{%endif%}>
     <div class="collapsible-header"><i class="material-icons">{{cat.icon}}</i>{{cat.name}}</div>
     <div class="collapsible-body">
-      <ul class="collection">
+      <ul class="collapsible">
       
       {% for cat2 in cat.child %}
       <li {% if include.page.cat2 == cat2.name %}class='active'{%endif%}>
