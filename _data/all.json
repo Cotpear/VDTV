@@ -1,17 +1,21 @@
-[
-  [
-    {
-      "name":"TV",
-      "icon":"live_tv"
-    },
-    [
-      {
-        "name":"NEWS",
-        "icon":"tv"
-      },
-      [
-        {}
-      ]
+{
+    "update": "2020-02-24",
+    "cat": [
+        {
+            "name": "TV",
+            "type": "cat1",
+            "child": [
+                {
+                    "name": "NEWS",
+                    "type": "cat2",
+                    "child": [
+                        {
+                            "link": "ctitv.html",
+                            "name": "中天電視台"
+                        }
+                    ]
+                }
+            ]
+        }
     ]
-  ]
-]
+}
