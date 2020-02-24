@@ -13,7 +13,11 @@
                     "child": [
                         {
                             "link": "ctitv.html",
-                            "name": "中天電視台"
+                            "name": "中天"
+                        },
+                        {
+                            "link": "TVBS.html",
+                            "name": "TVBS"
                         }
                     ]
                 }
