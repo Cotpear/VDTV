@@ -12,7 +12,7 @@
                     "icon":"tv",
                     "child": [
                         {
-                            "link": "/TV/NEW/ctitv.html",
+                            "link": "/TV/NEWS/ctitv.html",
                             "name": "中天"
                         },
                         {
@@ -24,11 +24,11 @@
                             "name": "中視"
                         },
                         {
-                            "link": "/TV/NEW/SETN.html",
+                            "link": "/TV/NEWS/SETN.html",
                             "name": "三立"
                         },
                         {
-                            "link": "/TV/NEW/CCTV.html",
+                            "link": "/TV/NEWS/CCTV.html",
                             "name": "CCTV"
                         }
                     ]
