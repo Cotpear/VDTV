@@ -4,10 +4,12 @@
         {
             "name": "TV",
             "type": "cat1",
+            "icon":"live_tv",
             "child": [
                 {
                     "name": "NEWS",
                     "type": "cat2",
+                    "icon":"tv",
                     "child": [
                         {
                             "link": "ctitv.html",
