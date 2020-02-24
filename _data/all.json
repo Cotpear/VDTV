@@ -26,6 +26,10 @@
                         {
                             "link": "/TV/NEW/SETN",
                             "name": "三立"
+                        },
+                        {
+                            "link": "/TV/NEW/CCTV",
+                            "name": "CCTV"
                         }
                     ]
                 }
