@@ -12,12 +12,20 @@
                     "icon":"tv",
                     "child": [
                         {
-                            "link": "ctitv.html",
+                            "link": "/TV/NEW/ctitv",
                             "name": "中天"
                         },
                         {
-                            "link": "TVBS.html",
+                            "link": "/TV/NEWS/TVBS",
                             "name": "TVBS"
+                        },
+                        {
+                            "link": "/TV/NEWS/ctv",
+                            "name": "中視"
+                        },
+                        {
+                            "link": "/TV/NEW/SETN",
+                            "name": "三立"
                         }
                     ]
                 }
