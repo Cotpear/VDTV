@@ -1,10 +1,8 @@
 <div class="row">
     
-    {% for cat in site.data.all[0].child %}
-    {{cat.name}} {{page.cat}}
+    {% for cat in site.data.all.cat[0].child %}
     {% if cat.name == page.cat %}
-    Ok, {{site.data.all[0].child[forloop.index].child | jsonify}}
-    {% for link in site.data.all[0].child[forloop.index].child %}
+    {% for link in cat.child %}
     <div class="col s12 m6">  
         <div class="card blue-grey darken-1">
             <div class="card-content white-text">
