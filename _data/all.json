@@ -28,6 +28,10 @@
                             "name": "三立"
                         },
                         {
+                            "link": "/TV/NEWS/EBC.html",
+                            "name": "東森"
+                        },
+                        {
                             "link": "/TV/NEWS/CCTV.html",
                             "name": "CCTV"
                         }
