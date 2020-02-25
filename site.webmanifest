@@ -1,0 +1,12 @@
+{
+    "name": "",
+    "short_name": "",
+    "icons": [
+        {
+            "src": "/asset/tv-192x192.jpeg",
+            "sizes": "192x192",
+            "type": "image/jpeg"
+        }
+    ],
+    "display": "standalone"
+}
