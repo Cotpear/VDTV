@@ -4,16 +4,19 @@
     {% if cat.name == page.cat %}
     {% for link in cat.child %}
     <div class="col s12 m6">  
-        <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-                <span class="card-title">{{link.name}}</span>
-            </div>
-            <div class="card-action">
-                <a href="{{link.link}}">Go</a>
-            </div>
-        </div> 
+        <ul class="collection with-header">  
+            <li class="collection-header">
+                <h4 class="teal-text">
+                    {{page.cat}}
+                </h4>
+            </li>
+            {% for link in cat.child %}
+            <li class="collection-item">
+                <div>{{link.name}}<a href="{{link.link}}" class="secondary-content"><i class="material-icons">link</i></a></div></li>
+            {% endfor %}
+        </ul>  
     </div>
-    {% endfor %}
+    
     {% endif %}
     {% endfor %}
     
