@@ -36,6 +36,18 @@
                             "name": "CCTV"
                         }
                     ]
+                },
+                {
+                    "name": "Cartoon",
+                    "type": "cat2",
+                    "icon":"tv",
+                    "child": [
+                        {
+                            "link": "/TV/NEWS/YOYO.html",
+                            "name": "YOYOTV"
+                        }
+                        
+                    ]
                 }
             ]
         }
