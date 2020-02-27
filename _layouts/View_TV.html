@@ -40,6 +40,7 @@
             <div id="yt" class="col s12">
                 <br>
                 <div class="video-container">
+                    "{{page.isPlaylist}}"
                     {% if page.isPlaylist == 'yes' %}
                     <iframe id="YT_frame" src="https://www.youtube.com/embed/videoseries?list={{page.video_id}}&vq=hd1080&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
                     {% else %}
