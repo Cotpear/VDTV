@@ -39,6 +39,7 @@
             </ul>
             <div id="yt" class="col s12">
                 <br>
+                {% if page.video_id %}
                 <div class="video-container">
                     {% if page.isPlaylist %}
                     <iframe id="YT_frame" src="https://www.youtube.com/embed/videoseries?list={{page.video_id}}&vq=hd1080&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
@@ -46,6 +47,9 @@
                     <iframe id="YT_frame" src="https://www.youtube.com/embed/{{page.video_id}}?vq=hd1080&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
                     {% endif %}
                 </div>
+                {% else %}
+                這部影片不允許嵌入或無法在此播放，您可查看「About」分頁了解更多。
+                {% endif %}
                 <br>
                 &copy; Cotpear VDTV
             </div>
