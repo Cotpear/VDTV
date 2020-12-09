@@ -7,11 +7,29 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>VDTV - 線上影音平台</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
 </head>
 
 <body class="">
+ <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">&nbsp;VDTV</a>
+            <a href="#" data-target="SideNavigation" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <div class="progress center" style="display:none;" id="AjaxLoading">
+                <div class="indeterminate"></div>
+            </div>
+        </div>
+    </nav>
     <div id="view">
-        <h1>VDTV</h1>
+        
         <a href='/TV/NEWS/TVBS.html'>新聞</a>
     </div>
     <script>
